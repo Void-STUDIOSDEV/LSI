@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <sys/utsname.h>
+#include <sys/sysinfo.h>
 using namespace std;
 
 int main() {
@@ -26,6 +27,20 @@ int main() {
     cout << "DEVICE NAME: " << device_name << "\n";
     cout << "OS: " << current_os << "\n";
     cout << "VERSION: " << version << "\n";
+    
+    struct sysinfo info;
+    if (sysinfo(&info) == 0) {
+        cout << "TOTAL RAM: "
+            << (info.totalram * info.mem_unit) / (1024 * 1024)
+            << " MiB\n";
+            
+        cout << "AVAILABLE RAM: "
+            << (info.freeram * info.mem_unit) / (1024 * 1024)
+            << " MiB\n";
+    }
+    else {
+        perror("sysinfo\n");
+    }
 
     return 0;
 }
