@@ -1,14 +1,7 @@
 #include <iostream>
 #include <string>
+#include <sys/utsname.h>
 using namespace std;
-
-#if defined(_WIN32) || defined(_WIN64)
-    #include <windows.h>
-    #define IS_WINDOWS true
-#else
-    #include <sys/utsname.h>
-    #define IS_WINDOWS false
-#endif
 
 int main() {
     string app = "Lightweight Source Systems Inspect";
