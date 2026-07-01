@@ -37,10 +37,15 @@ int main() {
         cout << "AVAILABLE RAM: "
             << (info.freeram * info.mem_unit) / (1024 * 1024)
             << " MiB\n";
+            
+        cout << "BUFFER/CACHE: "
+            << (info.bufferram * info.mem_unit) / (1024 * 1024)
+            << " MiB\n";
     }
+    
     else {
         perror("sysinfo\n");
     }
-
+    
     return 0;
 }
