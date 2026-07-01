@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     string app = "Linux Systems Inspector";
-    string app_version = "1.00.03 [Beta]";
+    string app_version = "1.00.04 [Beta]";
     string notice = "Application will remain in BETA until further notice [until I can continue production on Personal Computer]";
 
     string current_os = "Unknown OS";
