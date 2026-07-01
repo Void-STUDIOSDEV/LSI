@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    string app = "Lightweight Source Systems Inspect";
+    string app = "Linux Source Systems Inspect";
     string app_version = "1.00.00 [Beta]";
     string notice = "Application will remain in BETA until further notice [until I can continue production on Personal Computer]";
 
